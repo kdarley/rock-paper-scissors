@@ -1,0 +1,19 @@
+.scorecard-content {
+    display: flex;
+}
+
+.label {
+    padding-right: 10px;
+}
+
+.class-options {
+    display: flex;
+}
+
+#game {
+    display: none;
+}
+
+#end-screen{
+    display: none;
+}
