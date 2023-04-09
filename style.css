@@ -10,10 +10,44 @@
     display: flex;
 }
 
-#game {
+/* #game {
     display: none;
-}
+} */
 
 #end-screen{
     display: none;
 }
+
+#start-screen{
+    display: none;
+}
+
+.battlefield{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vs {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+
+    gap: 16px;
+    background-color: aqua;
+    height: 100px;
+}
+
+.visual {
+    background-color:blueviolet;
+    width: 400px;
+    color: white;
+    text-align: center;
+    align-self: top;
+
+}
+
+
+
+

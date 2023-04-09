@@ -51,6 +51,17 @@ function getUserChoice(){
     }      
 }
 
+function displayChoices(playerSelection, computerSelection){
+    playerS = playerSelection.toLowerCase()
+    computerS = computerSelection.toLowerCase()
+    
+    playerSelection = document.querySelector(".player.selection")
+    computerSelection = document.querySelector(".computer.selection")
+
+    playerSelection.textContent = playerS
+    computerSelection.textContent = computerS
+}
+
 function game(){
     computerWins=0
     playerWins=0
@@ -87,8 +98,10 @@ const playerOptions = document.querySelectorAll(".option")
 console.log(playerOptions)
 playerOptions.forEach((button) => {
      button.addEventListener('click', () => {
+        computerChoice = getComputerChoice(),
+        displayChoices(button.id, computerChoice),
+        incrementResult(playRound(button.id, computerChoice)[0]),
         incrementOne(),
-        incrementResult(playRound(button.id, getComputerChoice())[0]),
         gameOver()
      })
 });
@@ -109,9 +122,7 @@ function incrementResult(result){
         let newCount = parseInt(count) + 1;
     
         record.textContent = newCount;
-
     }
-
 }
 
 // incremenet the number of games played for each game
@@ -120,7 +131,7 @@ function incrementOne(){
     let count = gamesPlayed.textContent;
     let newCount = parseInt(count) + 1;
 
-    gamesPlayed.textContent =newCount;
+    gamesPlayed.textContent = newCount;
 }
 
 // // reset game on reset button click
