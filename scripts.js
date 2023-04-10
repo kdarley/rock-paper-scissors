@@ -52,14 +52,38 @@ function getUserChoice(){
 }
 
 function displayChoices(playerSelection, computerSelection){
+    // text
     playerS = playerSelection.toLowerCase()
     computerS = computerSelection.toLowerCase()
+    console.log(playerS)
     
     playerSelection = document.querySelector(".player.selection")
     computerSelection = document.querySelector(".computer.selection")
 
     playerSelection.textContent = playerS
     computerSelection.textContent = computerS
+
+    //image
+    playerImage = document.querySelector(".player.image")
+    computerImage = document.querySelector(".computer.image")
+
+    if (playerS == "rock"){
+        playerImage.src = "./images/rock_p.png"
+    } else if (playerS == "paper") {
+        playerImage.src = "./images/paper_p.png"
+    } else {
+        playerImage.src = "./images/scissors_p.png"
+    }
+
+    if (computerS == "rock"){
+        computerImage.src = "./images/rock_c.png"
+    } else if (computerS == "paper") {
+        computerImage.src = "./images/paper_c.png"
+    } else {
+        computerImage.src = "./images/scissors_c.png"
+    }
+
+
 }
 
 function game(){
@@ -100,11 +124,17 @@ playerOptions.forEach((button) => {
      button.addEventListener('click', () => {
         computerChoice = getComputerChoice(),
         displayChoices(button.id, computerChoice),
+        displayPrettyResult(playRound(button.id, computerChoice)[1]),
         incrementResult(playRound(button.id, computerChoice)[0]),
         incrementOne(),
         gameOver()
      })
 });
+
+function displayPrettyResult(result){
+    gamePrettyResult = document.querySelector(".result")
+    gamePrettyResult.textContent = result;
+}
 
 // give point to winner of game
 function incrementResult(result){
@@ -133,15 +163,6 @@ function incrementOne(){
 
     gamesPlayed.textContent = newCount;
 }
-
-// // reset game on reset button click
-// const reset = document.querySelector("#reset")
-// reset.addEventListener('click',()=> {
-//     const counters = document.querySelectorAll('.counter')
-//     for (c of counters){
-//         c.textContent=0
-//     }
-// });
 
 function resetCounters(){
     const resetCounter = document.querySelectorAll('.counter')
