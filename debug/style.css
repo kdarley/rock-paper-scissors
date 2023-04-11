@@ -1,0 +1,83 @@
+#end-screen{
+    display: none;
+}
+
+#start-screen{
+    display: none;
+}
+
+#game{
+    display: flex;
+}
+
+html{
+    min-height: 100%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    background-color: black;
+    /* justify-content: space-evenly; */
+    margin: 0px;
+    /* place-content: center; */
+
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+}
+
+div#game{
+    display: flex;
+    flex-direction: column;
+    /* place-content: center; */
+    /* flex-grow: 1; */
+    /* text-align: center; */
+    /* margin: auto; */
+    /* width: 100%; */
+    color: yellow;
+    background-color: red;
+    right: 50%;
+
+}
+
+.scorecard-content {
+    display: flex;
+}
+
+.label {
+    /* padding-right: 10px; */
+}
+
+.class-options {
+    display: flex;
+}
+
+.battlefield{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vs {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+
+    /* gap: 16px; */
+    background-color: aqua;
+    /* height: 100px; */
+}
+
+.visual {
+    background-color:blueviolet;
+    /* width: fill; */
+    color: white;
+    text-align: center;
+
+}
+
+
+
+

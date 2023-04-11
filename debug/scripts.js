@@ -179,7 +179,7 @@ function removeStartScreen(){
 
 function addGameScreen(){
     const addGameScreen = document.querySelector("#game")
-    addGameScreen.style.display = "flex";
+    addGameScreen.style.display = "inline";
 }
 
 function removeGameScreen(){
@@ -194,7 +194,7 @@ function removeEndScreen(){
 
 function addEndScreen(){
     const addEndScreen = document.querySelector("#end-screen")
-    addEndScreen.style.display = "flex";
+    addEndScreen.style.display = "inline";
 }
 
 const start = document.querySelector("button#start")

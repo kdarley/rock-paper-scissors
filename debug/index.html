@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "scripts.js" defer></script>
+        <!-- <script src = "addRemove.js" defer></script> -->
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id = "start-screen">
+            <h1>Let's Play Rock Paper Scissors!</h1>
+            <button id="start">Start Game</button> 
+        </div>
+        <div id = "end-screen">
+            <h1>Game Over</h1>
+            <div class="scorecard">
+                <h3>Score</h3>
+                <div class="scorecard-content">
+                    <div class = "scorecard-labels">
+                        <div class = "label">Player</div>
+                        <div class = "label">Computer</div>
+                        <div class = "label">Ties</div>
+                    </div>
+                    <div class = "scorecard-count">
+                        <div class="counter player" id="count-player">0</div>
+                        <div class="counter player" id="count-computer">0</div>
+                        <div class="counter" id="count-ties">0</div>
+                    </div>
+                </div>
+            </div>
+            <button id="play-again">Play Again?</button>
+        </div>
+
+        <div id="game">
+            <h1>Rock, Paper, Scissors!</h1> 
+            <div class="battlefield">
+                <h2>Time to fight.</h2>
+                <div class = "vs">
+                    <div class = "player visual">
+                        <h3 class = "player">Player</h4>
+                        <img class = "player image" src = "./images/rock_p.png" width = 100>
+                        <div class = "player selection"></div>
+                    </div>
+                    <div class = "computer visual" >
+                        <h3 class = "computer">Computer</h3>
+                        <img class = "computer image" src = "./images/rock_c.png" width = 100><div class = "computer visual">
+                        <div class = "computer selection"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+            <div class = "result"></div>
+            <div class="options">
+                <h2>Select Your Option</h2>
+                <div class = "class-options">
+                    <button class="option" id="rock">Rock</button>
+                    <button class="option" id="paper">Paper</button>
+                    <button class="option" id="scissors">Scissors</button>
+                </div>
+            </div>   
+
+            
+            <div class="scorecard">
+                <h3>Score</h3>
+                <div class="scorecard-content">
+                    <div class = "scorecard-labels">
+                        <div class = "label">Player</div>
+                        <div class = "label">Computer</div>
+                        <div class = "label">Ties</div>
+                    </div>
+                    <div class = "scorecard-count">
+                        <div class="counter player" id="count-player">0</div>
+                        <div class="counter player" id="count-computer">0</div>
+                        <div class="counter" id="count-ties">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-counter">
+                <h3>Games Played</h3>
+                <div class="counter" id="count-games">0</div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
