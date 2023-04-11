@@ -171,6 +171,25 @@ function resetCounters(){
     }
 };
 
+function resetPrettyText(){
+    const playerSelection = document.querySelector('.player.selection')
+    playerSelection.textContent = "";
+
+    const computerSelection = document.querySelector('.computer.selection')
+    computerSelection.textContent = "";
+
+    const result = document.querySelector('div.result')
+    result.textContent = "";
+}
+
+function resetImages(){
+    const resetPlayer = document.querySelector('.player.image')
+    resetPlayer.src = "./images/rock_p.png"
+
+    const resetComputer = document.querySelector('.computer.image')
+    resetComputer.src = "./images/rock_c.png"
+}
+
 // Start Game Button
 function removeStartScreen(){
     const removeStartScreen = document.querySelector("#start-screen")
@@ -217,6 +236,8 @@ function gameOver(){
 const playAgain = document.querySelector("#play-again")
 playAgain.addEventListener('click', ()=> {
     resetCounters(),
+    resetPrettyText(),
+    resetImages(),
     removeEndScreen(),
     addGameScreen();
 });
